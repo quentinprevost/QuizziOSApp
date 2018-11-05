@@ -38,6 +38,7 @@
 		DBE4315B219045800064E069 /* QuizzAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizzAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE4315F219045800064E069 /* QuizzAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzAppUITests.swift; sourceTree = "<group>"; };
 		DBE43161219045800064E069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBE4317121904DA00064E069 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		DBE4313E2190457F0064E069 = {
 			isa = PBXGroup;
 			children = (
+				DBE4317121904DA00064E069 /* README.md */,
 				DBE431492190457F0064E069 /* QuizzApp */,
 				DBE4315E219045800064E069 /* QuizzAppUITests */,
 				DBE431482190457F0064E069 /* Products */,
