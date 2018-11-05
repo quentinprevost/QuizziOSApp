@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		27C24AA0FE79E6B5C02C308E /* Pods_QuizzApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4366FB2D53937C7B5FEE65B0 /* Pods_QuizzApp.framework */; };
 		DBE4314B2190457F0064E069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4314A2190457F0064E069 /* AppDelegate.swift */; };
-		DBE4314D2190457F0064E069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4314C2190457F0064E069 /* ViewController.swift */; };
 		DBE431502190457F0064E069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE4314E2190457F0064E069 /* Main.storyboard */; };
 		DBE43152219045800064E069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE43151219045800064E069 /* Assets.xcassets */; };
 		DBE43155219045800064E069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE43153219045800064E069 /* LaunchScreen.storyboard */; };
@@ -33,7 +32,6 @@
 		D03D42BFBFFCA23A8E0537C5 /* Pods-QuizzApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizzApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizzApp/Pods-QuizzApp.release.xcconfig"; sourceTree = "<group>"; };
 		DBE431472190457F0064E069 /* QuizzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE4314A2190457F0064E069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBE4314C2190457F0064E069 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBE4314F2190457F0064E069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBE43151219045800064E069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBE43154219045800064E069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				DBE4314E2190457F0064E069 /* Main.storyboard */,
 				DBE4316A219045A20064E069 /* Sources */,
 				DBE4316B219045AC0064E069 /* Supporting Files */,
-				DBE4314C2190457F0064E069 /* ViewController.swift */,
 				DBE4316F219047110064E069 /* .swiftlint.yml */,
 			);
 			path = QuizzApp;
@@ -308,7 +305,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBE4314D2190457F0064E069 /* ViewController.swift in Sources */,
 				DBE4314B2190457F0064E069 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
