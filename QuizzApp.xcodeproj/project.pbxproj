@@ -13,7 +13,6 @@
 		DBE43152219045800064E069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE43151219045800064E069 /* Assets.xcassets */; };
 		DBE43155219045800064E069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE43153219045800064E069 /* LaunchScreen.storyboard */; };
 		DBE43160219045800064E069 /* QuizzAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4315F219045800064E069 /* QuizzAppUITests.swift */; };
-		DBE43170219047110064E069 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DBE4316F219047110064E069 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		DBE4315B219045800064E069 /* QuizzAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizzAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE4315F219045800064E069 /* QuizzAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzAppUITests.swift; sourceTree = "<group>"; };
 		DBE43161219045800064E069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBE4316F219047110064E069 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 				DBE4314E2190457F0064E069 /* Main.storyboard */,
 				DBE4316A219045A20064E069 /* Sources */,
 				DBE4316B219045AC0064E069 /* Supporting Files */,
-				DBE4316F219047110064E069 /* .swiftlint.yml */,
 			);
 			path = QuizzApp;
 			sourceTree = "<group>";
@@ -220,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBE43170219047110064E069 /* .swiftlint.yml in Resources */,
 				DBE43155219045800064E069 /* LaunchScreen.storyboard in Resources */,
 				DBE43152219045800064E069 /* Assets.xcassets in Resources */,
 				DBE431502190457F0064E069 /* Main.storyboard in Resources */,
