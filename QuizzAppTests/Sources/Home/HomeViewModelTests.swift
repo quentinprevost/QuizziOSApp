@@ -14,7 +14,7 @@ class HomeViewModelTests: XCTestCase {
     var categoryRepository: CategoryRepositoryProtocol!
     var questionRepository: QuestionRepositoryProtocol!
     var homeViewModel: HomeViewModel!
-    
+
     override func setUp() {
         self.categoryRepository = MockCategoryRepository()
         self.questionRepository = MockQuestionRepository()
@@ -27,12 +27,12 @@ class HomeViewModelTests: XCTestCase {
         questionRepository = nil
         homeViewModel = nil
     }
-    
+
     func testGetAnswersStatsResponseIsNotEqualZero() {
         let response = homeViewModel.getAnswersStats()
         XCTAssertNotEqual(response.count, 0)
     }
-    
+
     func testGetMessageForSharingQuestionResponseIsNotEmpty() {
         let response = homeViewModel.getMessageForSharingQuestion
         print(response)

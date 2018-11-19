@@ -15,7 +15,7 @@ final class MockQuestionRepository: QuestionRepositoryProtocol {
         let question = Question(questionTitle: "title", answers: [answer, answer], votes: 1)
         callback([question, question])
     }
-    
+
     func vote(for answerID: Int) {
     }
 }

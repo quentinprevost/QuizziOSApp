@@ -10,7 +10,7 @@
 import XCTest
 
 class QuestionRepositoryTests: XCTestCase {
-    
+
     var webService: WebServiceProtocol!
     var questionRepository: QuestionRepository!
 
@@ -23,7 +23,7 @@ class QuestionRepositoryTests: XCTestCase {
         webService = nil
         questionRepository = nil
     }
-    
+
     func testGetQuestionsIsNotEqualZero() {
         questionRepository.getQuestions(categoryID: 1) { questions in
             XCTAssertNotEqual(questions.count, 0)

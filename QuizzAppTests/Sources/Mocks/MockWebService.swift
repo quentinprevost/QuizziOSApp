@@ -11,7 +11,7 @@ import XCTest
 
 class MockWebService: WebServiceProtocol {
 
-    func request<T>(for type: T.Type, route: Router, completion: ((T?, Error?) -> Void)?) where T : Decodable, T : Encodable {
+    func request<T>(for type: T.Type, route: Router, completion: ((T?, Error?) -> Void)?) where T: Decodable, T: Encodable {
         switch route {
         case .categories:
             let category = CategoryQuestion(title: "title", id: 1)

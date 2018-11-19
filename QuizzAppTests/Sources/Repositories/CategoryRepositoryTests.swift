@@ -13,7 +13,7 @@ class CategoryRepositoryTests: XCTestCase {
 
     var webService: WebServiceProtocol!
     var categoryRepository: CategoryRepository!
-    
+
     override func setUp() {
         webService = MockWebService()
         categoryRepository = CategoryRepository(networker: webService)
@@ -23,7 +23,7 @@ class CategoryRepositoryTests: XCTestCase {
         webService = nil
         categoryRepository = nil
     }
-    
+
     func testGetCategoriesIsNotEqualZero() {
         categoryRepository.getCategories { categories in
             XCTAssertNotEqual(categories.count, 0)
