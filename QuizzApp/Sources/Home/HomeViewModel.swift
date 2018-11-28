@@ -7,28 +7,15 @@
 //
 
 import Foundation
-import UIKit
 import Alamofire
 
 final class HomeViewModel {
 
     // MARK: - Properties
     private var categories: [CategoryQuestion] = []
-    private var questions: [Question] = []
+    private(set) var questions: [Question] = []
     private let categoryRepository: CategoryRepositoryProtocol
     private let questionRepository: QuestionRepositoryProtocol
-
-    var getAnswersText: [String] {
-        guard let question = questions.first, question.answers.count == 2 else {
-            loadQuestions()
-            return []
-        }
-        return [question.answers[0].text, question.answers[1].text]
-    }
-
-    var categoriesCount: Int {
-        return categories.count
-    }
 
     init(categoryRepository: CategoryRepositoryProtocol = CategoryRepository(), questionRepository: QuestionRepositoryProtocol = QuestionRepository()) {
         self.categoryRepository = categoryRepository
@@ -36,22 +23,17 @@ final class HomeViewModel {
         loadCategories()
     }
 
-    func getAnswersStats() -> [String] {
-        guard let answers = questions.first else {
+    var getAnswersText: [String] {
+        guard let question = questions.first else {
+            loadQuestions()
             return []
         }
 
-        return answers.answers.map { answer in
-            let votes = answers.votes == 0 ? "50%" : "\((answer.answeredCount * 100) / (answers.votes))%"
-            return "\(answer.text)\n 🗳 \(votes)"
-        }
+        return question.answers.map { $0.text }
     }
 
-    private func loadCategories() {
-        categoryRepository.getCategories { categories in
-            self.categories = categories
-            self.loadQuestions()
-        }
+    var categoriesCount: Int {
+        return categories.count
     }
 
     var getMessageForSharingQuestion: String {
@@ -61,6 +43,17 @@ final class HomeViewModel {
 
         let message = "What do you prefer ? \n 1️⃣  \(firstAnswer )\n OR \n 2️⃣ \(lastAnswer)"
         return message
+    }
+
+    func getAnswersStats() -> [String] {
+        guard let question = questions.first else {
+            return []
+        }
+
+        return question.answers.map { answer in
+            let percentage = getPercentage(question: question, answer: answer)
+            return "\(answer.text)\n 🗳 \(percentage)"
+        }
     }
 
     func loadQuestions(row: Int? = nil) {
@@ -73,7 +66,8 @@ final class HomeViewModel {
             categoryID = categories[row].id
         }
 
-        questionRepository.getQuestions(categoryID: categoryID) { questions in
+        questionRepository.getQuestions(categoryID: categoryID) { [weak self] questions in
+            guard let self = self else { return }
             self.questions = questions
         }
     }
@@ -82,17 +76,29 @@ final class HomeViewModel {
         questions.removeFirst()
     }
 
-    @objc func didSelectAnswer(_ button: UIButton) {
-        guard questions.count > 0 else { return }
-        guard let question = questions.first, question.answers.count == 2 else {
+    func vote(for tag: Int) {
+        guard let question = questions.first, questions.count > 0 else {
             return
         }
 
-        let answerID = question.answers[button.tag].id
+        let answerID = question.answers[tag].id
         questionRepository.vote(for: answerID)
     }
 
     func getCategoryTitle(for indexPath: IndexPath) -> String {
         return categories[indexPath.row ].title.uppercased()
+    }
+
+    // MARK: - Private functions
+    private func loadCategories() {
+        categoryRepository.getCategories { [weak self] categories in
+            guard let self = self else { return }
+            self.categories = categories
+            self.loadQuestions()
+        }
+    }
+
+    private func getPercentage(question: Question, answer: Question.Answer) -> String {
+        return question.votes == 0 ? "50%" : "\((answer.answeredCount * 100) / (question.votes))%"
     }
 }

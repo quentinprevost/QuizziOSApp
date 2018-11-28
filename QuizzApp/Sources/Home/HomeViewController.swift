@@ -71,24 +71,23 @@ final class HomeViewController: UIViewController {
         for (index, answer) in answers.enumerated() {
             homeView.buttons[index].setTitle(answer.capitalized, for: .normal)
             homeView.buttons[index].backgroundColor = #colorLiteral(red: 0.2823529412, green: 0.2392156863, blue: 0.5450980392, alpha: 1)
-            homeView.buttons[index].isEnabled = true
-        }
+            homeView.buttons[index].isEnabled = true        }
         homeView.spinner.stopAnimating()
     }
 
     @objc private func didSelectAnswer(_ button: UIButton) {
-        let stats = homeViewModel.getAnswersStats()
-        guard stats.count == 2, homeView.buttons.count == 2 else {
+        let answersWithStats = homeViewModel.getAnswersStats()
+        guard answersWithStats.count == 2, homeView.buttons.count == 2 else {
             return
         }
 
         button.backgroundColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
 
-        for (index, stats) in stats.enumerated() {
-            homeView.buttons[index].setTitle(stats, for: .normal)
+        for (index, answerWithStats) in answersWithStats.enumerated() {
+            homeView.buttons[index].setTitle(answerWithStats, for: .normal)
             homeView.buttons[index].isEnabled = false
         }
-        self.homeViewModel.didSelectAnswer(button)
+        self.homeViewModel.vote(for: button.tag)
     }
 
     private func activateShareImageGesture() {

@@ -38,4 +38,10 @@ class HomeViewModelTests: XCTestCase {
         print(response)
         XCTAssertNotEqual(response, "")
     }
+
+    func testDeleteCurrentQuestionWorks() {
+        let beforeQuestionscount = homeViewModel.questions.count
+        homeViewModel.deleteCurrentQuestion()
+        XCTAssertNotEqual(beforeQuestionscount, homeViewModel.questions.count)
+    }
 }
