@@ -18,6 +18,7 @@
 		DB9F6BE221A08DB000A9E342 /* MockCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F6BE121A08DB000A9E342 /* MockCategoryRepository.swift */; };
 		DB9F6BE421A091CE00A9E342 /* MockQuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F6BE321A091CE00A9E342 /* MockQuestionRepository.swift */; };
 		DB9F6BE721A0924A00A9E342 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F6BE621A0924A00A9E342 /* HomeViewModelTests.swift */; };
+		DBC8DA2C21D92D230095C9D0 /* UIViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DA2B21D92D230095C9D0 /* UIViewConstants.swift */; };
 		DBDE29CA219C820B00B5E668 /* HomeViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDE29C9219C820A00B5E668 /* HomeViewController+UICollectionViewDelegate.swift */; };
 		DBE4314B2190457F0064E069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4314A2190457F0064E069 /* AppDelegate.swift */; };
 		DBE43152219045800064E069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE43151219045800064E069 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		DB9F6BE121A08DB000A9E342 /* MockCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategoryRepository.swift; sourceTree = "<group>"; };
 		DB9F6BE321A091CE00A9E342 /* MockQuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockQuestionRepository.swift; sourceTree = "<group>"; };
 		DB9F6BE621A0924A00A9E342 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		DBC8DA2B21D92D230095C9D0 /* UIViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstants.swift; sourceTree = "<group>"; };
 		DBDE29C9219C820A00B5E668 /* HomeViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		DBE431472190457F0064E069 /* QuizzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE4314A2190457F0064E069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DBC8DA2A21D92CCA0095C9D0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DBC8DA2B21D92D230095C9D0 /* UIViewConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		DBE4313E2190457F0064E069 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,7 @@
 		DBE4316A219045A20064E069 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DBC8DA2A21D92CCA0095C9D0 /* Constants */,
 				DB9D87F82195D7F5009125A1 /* Repositories */,
 				DBE731482193095E0079626D /* API */,
 				DBE731152191BE590079626D /* Helpers */,
@@ -466,6 +477,7 @@
 				DB9D87FC2195DEC7009125A1 /* QuestionRepository.swift in Sources */,
 				DBE7315B2194676B0079626D /* HomeViewModel.swift in Sources */,
 				DB9D87FA2195D802009125A1 /* CategoryRepository.swift in Sources */,
+				DBC8DA2C21D92D230095C9D0 /* UIViewConstants.swift in Sources */,
 				DBE7314F21930A750079626D /* WebService.swift in Sources */,
 				DBE731172191BE6C0079626D /* EasyView.swift in Sources */,
 				DB9D87F62195D49E009125A1 /* HomeViewController+UICollectionViewDataSource.swift in Sources */,

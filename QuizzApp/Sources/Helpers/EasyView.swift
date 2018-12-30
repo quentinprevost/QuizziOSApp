@@ -9,6 +9,7 @@
 import UIKit
 
 class EasyView: UIView {
+    // MARK: - Functions
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

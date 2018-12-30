@@ -37,14 +37,14 @@ final class HomeViewModel {
     }
 
     var getMessageForSharingQuestion: String {
-        guard let firstAnswer = getAnswersText.first, let lastAnswer = getAnswersText.last else {
+        guard let firstAnswer = getAnswersText.first, let secondAnswer = getAnswersText.last else {
             return ""
         }
 
-        let message = "What do you prefer ? \n 1️⃣  \(firstAnswer )\n OR \n 2️⃣ \(lastAnswer)"
-        return message
+        return UIViewConstant.sharingMessage(firstAnswer: firstAnswer, secondAnswer: secondAnswer)
     }
 
+    // MARK: - Functions
     func getAnswersStats() -> [String] {
         guard let question = questions.first else {
             return []

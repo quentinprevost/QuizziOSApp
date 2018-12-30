@@ -117,7 +117,7 @@ final class HomeView: EasyView {
         layout.minimumLineSpacing = 3
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: "collectionCell")
+        collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: UIViewConstant.categoriesCollectionCell)
         collectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.1125306832)
         collectionView.autoresizesSubviews = true
 

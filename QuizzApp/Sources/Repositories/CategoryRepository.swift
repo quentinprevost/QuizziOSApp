@@ -17,6 +17,7 @@ final class CategoryRepository: CategoryRepositoryProtocol {
     // MARK: - Properties
     private let networker: WebServiceProtocol
 
+    // MARK: - Functions
     init(networker: WebServiceProtocol = WebService()) {
         self.networker = networker
     }

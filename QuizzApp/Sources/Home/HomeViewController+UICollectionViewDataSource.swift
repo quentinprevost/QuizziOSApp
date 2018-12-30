@@ -10,12 +10,13 @@ import UIKit
 
 extension HomeViewController: UICollectionViewDataSource {
 
+    // MARK: - Functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return homeViewModel?.categoriesCount ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell",
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UIViewConstant.categoriesCollectionCell,
                                                             for: indexPath) as? HomeCollectionViewCell else {
                                                                 return HomeCollectionViewCell()
         }

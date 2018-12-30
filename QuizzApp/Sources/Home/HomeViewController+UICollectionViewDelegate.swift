@@ -9,6 +9,7 @@
 import UIKit
 
 extension HomeViewController: UICollectionViewDelegate {
+    // MARK: - Functions
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         homeView.spinner.startAnimating()
         homeViewModel.loadQuestions(row: indexPath.row)
