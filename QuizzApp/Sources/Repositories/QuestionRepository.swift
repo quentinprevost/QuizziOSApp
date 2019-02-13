@@ -16,9 +16,11 @@ protocol QuestionRepositoryProtocol {
 final class QuestionRepository: QuestionRepositoryProtocol {
 
     // MARK: - Properties
+
     private let networker: WebServiceProtocol
 
     // MARK: - Functions
+
     init(networker: WebServiceProtocol = WebService()) {
         self.networker = networker
     }

@@ -9,6 +9,9 @@
 import Alamofire
 
 enum Router: URLRequestConvertible {
+
+    // MARK: Cases
+
     case questions(categoryID: Int)
     case categories
     case vote(parameters: Parameters)

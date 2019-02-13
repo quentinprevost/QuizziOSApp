@@ -9,6 +9,9 @@
 import Foundation
 
 struct CategoryQuestion: Codable {
+
+    // MARK: Properties
+
     let title: String
     let id: Int
 }

@@ -16,6 +16,7 @@ protocol WebServiceProtocol {
 final class WebService: WebServiceProtocol {
 
     // MARK: - Properties
+
     private let jsonDecoder: JSONDecoder
 
     init() {

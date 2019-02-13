@@ -160,7 +160,7 @@ final class HomeView: EasyView {
             topConstraint,
             centerXAnchorConstraint,
             bottomConstraint
-            ])
+        ])
     }
 
     private func activeConstraintsLogoLabel() {

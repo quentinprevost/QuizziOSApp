@@ -11,6 +11,7 @@ import UIKit
 class HomeCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Properties
+
     override var isSelected: Bool {
         didSet {
             if isSelected {

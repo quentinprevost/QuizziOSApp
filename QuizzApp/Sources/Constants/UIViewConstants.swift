@@ -9,13 +9,14 @@
 import Foundation
 
 struct UIViewConstant {
+
     // MARK: - Properties
+
     static let categoriesCollectionCell = "categoriesCollectionCell"
 
     // MARK: - Functions
+
     static func sharingMessage(firstAnswer: String, secondAnswer: String) -> String {
         return "What do you prefer ? \n 1️⃣  \(firstAnswer )\n OR \n 2️⃣ \(secondAnswer)"
     }
-    
-    
 }
