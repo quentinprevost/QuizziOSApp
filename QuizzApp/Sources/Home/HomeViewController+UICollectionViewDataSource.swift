@@ -11,6 +11,7 @@ import UIKit
 extension HomeViewController: UICollectionViewDataSource {
 
     // MARK: - Functions
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return homeViewModel?.categoriesCount ?? 0
     }
