@@ -15,7 +15,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                categoryLabel.textColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+                categoryLabel.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
             } else {
                 categoryLabel.textColor = .white
             }
@@ -29,6 +29,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
 
     // MARK: - Views
+
     private let categoryLabel: UILabel = {
         let label = UILabel()
         label.font = label.font.withSize(25)
@@ -39,6 +40,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }()
 
     // MARK: - Constraints
+
     private func activeConstraintsLabel() {
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
         let centerXConstraint = categoryLabel.centerXAnchor.constraint(equalTo: centerXAnchor)

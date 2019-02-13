@@ -11,6 +11,7 @@ import UIKit
 final class HomeView: EasyView {
 
     // MARK: - Properties
+
     private(set) var buttons: [UIButton] = []
 
     override init(frame: CGRect = .zero) {
@@ -19,7 +20,7 @@ final class HomeView: EasyView {
     }
 
     private func configureView() {
-        backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
+        backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         generateButtons()
         addViews()
         activateConstraints()
@@ -43,6 +44,7 @@ final class HomeView: EasyView {
     }
 
     // MARK: - Views
+
     private lazy var questionsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: buttons)
         stackView.axis = .vertical
@@ -70,7 +72,7 @@ final class HomeView: EasyView {
     let nextButton: UIButton = {
         let button = UIButton()
         button.titleLabel?.textColor = .white
-        button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
         button.titleLabel?.font = button.titleLabel?.font.withSize(30)
         button.setTitle("NEXT QUESTION", for: .normal)
         button.titleLabel?.textAlignment = .center
@@ -131,6 +133,7 @@ final class HomeView: EasyView {
     }()
 
     // MARK: - Constraints
+
     private func activateConstraintsNextButton() {
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         let widthConstraint = nextButton.widthAnchor.constraint(equalToConstant: 180)

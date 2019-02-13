@@ -12,6 +12,7 @@ import Alamofire
 final class HomeViewModel {
 
     // MARK: - Properties
+
     private var categories: [CategoryQuestion] = []
     private(set) var questions: [Question] = []
     private let categoryRepository: CategoryRepositoryProtocol
@@ -45,6 +46,7 @@ final class HomeViewModel {
     }
 
     // MARK: - Functions
+
     func getAnswersStats() -> [String] {
         guard let question = questions.first else {
             return []
@@ -90,6 +92,7 @@ final class HomeViewModel {
     }
 
     // MARK: - Private functions
+
     private func loadCategories() {
         categoryRepository.getCategories { [weak self] categories in
             guard let self = self else { return }

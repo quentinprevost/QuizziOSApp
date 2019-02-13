@@ -71,8 +71,9 @@ final class HomeViewController: UIViewController {
 
         for (index, answer) in answers.enumerated() {
             homeView.buttons[index].setTitle(answer.capitalized, for: .normal)
-            homeView.buttons[index].backgroundColor = #colorLiteral(red: 0.2823529412, green: 0.2392156863, blue: 0.5450980392, alpha: 1)
-            homeView.buttons[index].isEnabled = true        }
+            homeView.buttons[index].backgroundColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
+            homeView.buttons[index].isEnabled = true
+        }
         homeView.spinner.stopAnimating()
     }
 
