@@ -16,6 +16,8 @@ struct ConstantsCustom {
     static let backgroundColor: UIColor = .black
     static let nextButtonColor: UIColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
     static let buttonBackgroundColor: UIColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    static let notificationCategoriesLoaded = "categoriesLoaded"
+    static let notificationQuestionsLoaded = "questionsLoaded"
 
     // MARK: - Functions
 

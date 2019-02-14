@@ -23,6 +23,8 @@ final class WebService: WebServiceProtocol {
         jsonDecoder = JSONDecoder()
     }
 
+    // MARK: - Functions
+
     func request<T>(for type: T.Type, route: Router, completion: ((T?, Error?) -> Void)?) where T: Codable {
         Alamofire.request(route).responseJSON { response in
             guard let json = response.data else {

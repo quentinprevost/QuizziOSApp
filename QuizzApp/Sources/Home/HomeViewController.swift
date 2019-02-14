@@ -77,6 +77,7 @@ final class HomeViewController: UIViewController {
             homeView.buttons[index].backgroundColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
             homeView.buttons[index].isEnabled = true
         }
+
         homeView.spinner.stopAnimating()
     }
 
@@ -92,7 +93,8 @@ final class HomeViewController: UIViewController {
             homeView.buttons[index].setTitle(answerWithStats, for: .normal)
             homeView.buttons[index].isEnabled = false
         }
-        self.homeViewModel.vote(for: button.tag)
+
+        homeViewModel.vote(for: button.tag)
     }
 
     private func activateShareImageGesture() {

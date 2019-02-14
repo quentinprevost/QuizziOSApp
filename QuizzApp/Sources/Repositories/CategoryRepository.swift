@@ -33,7 +33,7 @@ final class CategoryRepository: CategoryRepositoryProtocol {
             callback(categories)
 
             DispatchQueue.main.async {
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "categoriesLoaded"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: ConstantsCustom.notificationCategoriesLoaded), object: nil)
             }
         }
     }

@@ -33,7 +33,7 @@ final class QuestionRepository: QuestionRepositoryProtocol {
             callback(questions)
 
             DispatchQueue.main.async {
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "questionsLoaded"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: ConstantsCustom.notificationQuestionsLoaded), object: nil)
             }
         }
     }
