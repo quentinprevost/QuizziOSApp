@@ -12,10 +12,12 @@ import Alamofire
 final class HomeViewController: UIViewController {
 
     // MARK: - Properties
+
     private(set) var homeView: HomeView!
     private(set) var homeViewModel: HomeViewModel!
 
     // MARK: - Functions
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let homeViewModel = HomeViewModel()
@@ -25,6 +27,7 @@ final class HomeViewController: UIViewController {
     }
 
     // MARK: Private Functions
+
     private func configureViews() {
         homeView = HomeView()
         view = homeView
