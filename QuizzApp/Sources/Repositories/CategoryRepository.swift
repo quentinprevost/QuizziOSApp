@@ -29,7 +29,9 @@ final class CategoryRepository: CategoryRepositoryProtocol {
             guard let categories = categories, error == nil else {
                 return
             }
+
             callback(categories)
+
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "categoriesLoaded"), object: nil)
             }

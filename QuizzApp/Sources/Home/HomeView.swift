@@ -20,7 +20,7 @@ final class HomeView: EasyView {
     }
 
     private func configureView() {
-        backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        backgroundColor = ConstantsCustom.backgroundColor
         generateButtons()
         addViews()
         activateConstraints()
@@ -72,7 +72,7 @@ final class HomeView: EasyView {
     let nextButton: UIButton = {
         let button = UIButton()
         button.titleLabel?.textColor = .white
-        button.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
+        button.backgroundColor = ConstantsCustom.nextButtonColor
         button.titleLabel?.font = button.titleLabel?.font.withSize(30)
         button.setTitle("NEXT QUESTION", for: .normal)
         button.titleLabel?.textAlignment = .center
@@ -92,7 +92,7 @@ final class HomeView: EasyView {
             button.titleLabel?.minimumScaleFactor = 0.1
             button.titleLabel?.font = button.titleLabel?.font.withSize(25)
             button.titleLabel?.textColor = .green
-            button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            button.backgroundColor = ConstantsCustom.buttonBackgroundColor
             button.layer.cornerRadius = 15.0
             button.tag = index
             buttons.append(button)
@@ -119,7 +119,7 @@ final class HomeView: EasyView {
         layout.minimumLineSpacing = 3
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: UIViewConstant.categoriesCollectionCell)
+        collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: ConstantsCustom.categoriesCollectionCell)
         collectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.1125306832)
         collectionView.autoresizesSubviews = true
 

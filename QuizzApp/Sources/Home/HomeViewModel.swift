@@ -42,7 +42,7 @@ final class HomeViewModel {
             return ""
         }
 
-        return UIViewConstant.sharingMessage(firstAnswer: firstAnswer, secondAnswer: secondAnswer)
+        return ConstantsCustom.sharingMessage(firstAnswer: firstAnswer, secondAnswer: secondAnswer)
     }
 
     // MARK: - Functions
