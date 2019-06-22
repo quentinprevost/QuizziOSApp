@@ -75,7 +75,9 @@ final class HomeViewModel {
     }
 
     func deleteCurrentQuestion() {
-        questions.removeFirst()
+        if !questions.isEmpty {
+          questions.removeFirst()
+        }
     }
 
     func vote(for tag: Int) {
