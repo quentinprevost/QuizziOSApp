@@ -19,7 +19,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConstantsCustom.categoriesCollectionCell,
                                                             for: indexPath) as? HomeCollectionViewCell else {
-                                                                return HomeCollectionViewCell()
+                                                                fatalError()
         }
 
         let categoryTitle = homeViewModel?.getCategoryTitle(for: indexPath) ?? ""
