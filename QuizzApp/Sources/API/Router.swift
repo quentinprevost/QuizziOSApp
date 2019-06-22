@@ -16,7 +16,7 @@ enum Router: URLRequestConvertible {
     case categories
     case vote(parameters: Parameters)
 
-    static let baseURLString = "https://artefactes.club"
+    static let baseURLString = ""
 
     var method: HTTPMethod {
         switch self {
