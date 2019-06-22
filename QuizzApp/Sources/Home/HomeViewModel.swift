@@ -69,8 +69,8 @@ final class HomeViewModel {
         }
 
         questionRepository.getQuestions(categoryID: categoryID) { [weak self] questions in
-            guard let self = self else { return }
-            self.questions = questions
+            guard let strongSelf = self else { return }
+            strongSelf.questions = questions
         }
     }
 
@@ -95,9 +95,9 @@ final class HomeViewModel {
 
     private func loadCategories() {
         categoryRepository.getCategories { [weak self] categories in
-            guard let self = self else { return }
-            self.categories = categories
-            self.loadQuestions()
+            guard let strongSelf = self else { return }
+            strongSelf.categories = categories
+            strongSelf.loadQuestions()
         }
     }
 
